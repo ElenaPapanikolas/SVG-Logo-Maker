@@ -1,7 +1,7 @@
 // Importing
 const inquirer = require('inquirer');
 const { writeFile } = require('fs/promises');
-const { generateLogo } = require('./lib/generateLogo');
+const generateLogo = require('./lib/generateLogo');
 
 
 // Questions for logo information
@@ -50,7 +50,7 @@ function getLogo() {
     inquirer.prompt(questions)
     .then(data => writeFile(`./examples/${data.text}.svg`, generateLogo(data)))
     .then(() => console.log('Logo completed! See the examples folder for your new logo.'))
-    .catch((err) => console.log('Error, please try again.'));
+    .catch((err) => console.log('Error, please try again.', err));
 }
 
 //
