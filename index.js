@@ -21,7 +21,7 @@ const questions = [
     {
         type: 'input',
         name: 'textColor',
-        message: 'What color would you like for the text?',
+        message: 'What color would you like for the text? (Color keyword or hexadecimal number):',
         validate: function(input) {
             return input ? true :'Please enter a color.'
         }
@@ -29,7 +29,7 @@ const questions = [
     {
         type: 'list',
         name: 'shape',
-        message: 'Please select a shape',
+        message: 'Please select a shape:',
         choices: ['Circle', 'Triangle', 'Square'],
         validate: function(input) {
             return list ? true : 'Please enter a shape.'
@@ -38,7 +38,7 @@ const questions = [
     {
         type: 'input',
         name: 'shapeColor',
-        message: 'What color would you like the shape?',
+        message: 'What color would you like the shape? (Color keyword or hexadecimal number):',
         validate: function(input) {
             return input ? true : 'Please enter a color.'
         }
