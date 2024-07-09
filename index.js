@@ -4,7 +4,7 @@ const { writeFile } = require('fs/promises');
 const generateLogo = require('./lib/generateLogo');
 
 
-// Questions for logo information
+// Questions gathering logo information
 const questions = [
     {
         type: 'input',
@@ -53,5 +53,5 @@ function getLogo() {
     .catch((err) => console.log('Error, please try again.', err));
 }
 
-//
+// Calling the function
 getLogo();
